@@ -5,10 +5,9 @@
   "scripts": {
     "postinstall": "prisma generate",
     "dev": "next dev",
-    "build": "prisma generate && <actual-build-command>",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint"
-    
   },
   "dependencies": {
     "@auth/prisma-adapter": "^1.6.0",
