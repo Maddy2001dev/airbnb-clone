@@ -1,7 +1,7 @@
 'use client';
 import { SafeUser } from '@/app/types';
 
-import React from 'react';
+import React, { Suspense } from 'react';
 import Container from '../container';
 import Categories from './Categories';
 import Logo from './Logo';
@@ -19,14 +19,20 @@ const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {
         <Container>
           <div className="flex flex-row justify-between items-center gap-3 md:gap-0">
             <Logo />
-            <Search />
+            {/* /TODO */}
+            <Suspense>
+              <Search />
+            </Suspense>
             <UserMenu currentUser={currentUser} />
           </div>
         </Container>
       </div>
-      <Categories />
+      <Suspense>
+        <Categories />
+      </Suspense>
     </div>
   );
 };
+// /TODO
 
 export default Navbar;
