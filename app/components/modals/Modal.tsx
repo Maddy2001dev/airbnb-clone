@@ -64,6 +64,13 @@ export default function Modal({
   return (
     <>
       <div
+        onClick={(e) => {
+          console.log(e.target);
+          console.log(e.currentTarget);
+          if (e.target === e.currentTarget) {
+            onClose();
+          }
+        }}
         className="
     justify-center items-center
     flex
