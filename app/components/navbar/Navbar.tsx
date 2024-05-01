@@ -19,7 +19,6 @@ const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {
         <Container>
           <div className="flex flex-row justify-between items-center gap-3 md:gap-0">
             <Logo />
-            {/* /TODO */}
             <Suspense>
               <Search />
             </Suspense>
